@@ -233,6 +233,7 @@ Final Token Balance: 50
 ### Key Highlight:
 The conversion logic uses an inter-contract call:
 `IKPPToken(tokenAddress).mint(msg.sender, amount);`
+
 This ensures:
 - Points are deducted securely
 - Tokens are minted via a separate contract
