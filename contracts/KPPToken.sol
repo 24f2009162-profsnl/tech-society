@@ -1,5 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.28;
+
+// @title KPPToken - Campus Currency Token
+// @author Twisha Shriyam
+// @notice Handles minting and transfer of KPP tokens within campus ecosystem
 
 contract KPPToken {
 
@@ -27,26 +31,5 @@ contract KPPToken {
         balanceOf[to] += amount;
 
         emit Transfer(msg.sender, to, amount);
-    }
-}
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.28;
-
-// @title KPPToken - Campus Currency Token
-// @author Twisha Shriyam
-// @notice Handles minting and transfer of KPP tokens within campus ecosystem
-
-contract KPPToken {
-
-    string public name = "KPP Token";
-    string public symbol = "KPP";
-    uint256 public totalSupply;
-
-    mapping(address => uint256) public balanceOf;
-
-    // @notice Mint new tokens to a user
-    function mint(address to, uint256 amount) public {
-        balanceOf[to] += amount;
-        totalSupply += amount;
     }
 }
