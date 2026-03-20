@@ -185,10 +185,27 @@ Frontend: [Vercel / Netlify Link Here]
 - Dashboard Interface  
 - Payment Flow (QR / Wallet)  
 
-(screenshots folder)
+### 🧾 Contract Compilation
+Shows successful compilation of smart contracts using Hardhat.
+![Compilation Screenshot](./screenshots/compile.png)
+
+### 🔗 Inter-Contract Call
+Proof of interaction between KPPPoints and KPPToken contracts.
+![Inter-contract Screenshot](./screenshots/intercontract.png)
+
+### 📂 Project Structure
+Overview of project folders and files.
+![Structure Screenshot](./screenshots/structure.png)
+
+### ⚙️ Local Node Running
+Hardhat local blockchain running with test accounts.
+![Node Screenshot](./screenshots/node.png)
+
+### 📱 Mobile Responsive View
+GitHub repository viewed in mobile format.
+![Mobile View](./screenshots/mobile.png)
 
 ## ⚙️ CI/CD Pipeline
-
 CI/CD is configured using GitHub Actions to ensure production readiness:
 
 - Automated builds  
