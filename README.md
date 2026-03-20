@@ -219,8 +219,8 @@ CI/CD is configured using GitHub Actions to ensure production readiness:
 - Code validation  
 - Deployment checks  
 
-(CI/CD badge or screenshot folder)
 ![CI](https://img.shields.io/badge/CI-passing-brightgreen)
+
 ## 🔐 Smart Contract Details
 
 - Points Contract Address: [To be added]  
