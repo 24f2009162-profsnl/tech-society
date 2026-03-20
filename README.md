@@ -157,6 +157,12 @@ Campus-level adoption and scaling
 Multi-campus deployment model
 Advanced reward mechanisms and incentives
 Error tracking and performance monitoring
+### Planned Enhancements:
+- Integration with real campus services (canteens, libraries, rentals)
+- QR-based payments for instant transactions
+- Role-based task system for clubs and startups
+- Analytics dashboard for tracking user activity
+- Expansion to multiple campuses as a reusable model
 
 ### Flow:
 
