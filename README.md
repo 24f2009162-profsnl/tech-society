@@ -242,10 +242,52 @@ CI/CD is configured using GitHub Actions to ensure production readiness:
 | 5 | User5 | Tested full flow |
 
 ## 🧠 Feedback & Iteration so far till sunday 22nd march 2026
-
 - Users liked the simplicity of earning system  
 - Some confusion around conversion logic  
 - Iteration: Improved UI clarity and flow  
+## 👥 User Validation
+The MVP was tested with real users across multiple cities in India.
+
+| User | Location | Action |
+|------|----------|--------|
+| 1 | Chandigarh | Tested earning + conversion flow |
+| 2 | Rajasthan | Tested multi-user simulation |
+| 3 | Delhi | Tested UI and interaction |
+| 4 | Nagpur | Tested responsiveness |
+| 5 | Chennai | Tested full flow |
+| 6 | Assam | Tested usability and clarity |
+
+---
+
+### Key Insights from Users:
+
+- 4/6 users understood the flow instantly  
+- 2 users were initially confused about point-to-token conversion  
+- All users were able to complete the flow successfully  
+- Users liked the simplicity and quick interaction model  
+
+### Iteration Implemented:
+
+- Improved clarity in transaction history  
+- Simplified interaction flow for better usability  
+- Structured UI for clearer action visibility  
+
+---
+
+## 🎥 User Testing Proof
+
+- Screen recordings collected from multiple users across locations  
+- Demonstrates real interaction with MVP  
+
+*(Proof available included in submission assets)*
+
+---
+
+## 🌍 Validation Strength
+- 6 real users  
+- Multi-city testing (Chandigarh, Rajasthan, Delhi, Nagpur, Chennai, Assam)  
+- Cross-device validation (mobile + desktop)  
+This validates real-world usability and scalability of the KPP MVP.
 
 ## Author Details
 Twisha Shriyam
