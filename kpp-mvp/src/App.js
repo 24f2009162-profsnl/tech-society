@@ -32,17 +32,28 @@ function App() {
 
   // 🔗 Wallet Connect
   const connectWallet = async () => {
-    try {
-      if (!window.freighter) {
-        alert("Freighter not detected. Use deployed version.");
-        return;
-      }
+  try {
+    // Modern Freighter
+    if (window.freighterApi) {
+      const publicKey = await window.freighterApi.getPublicKey();
+      setWallet(publicKey);
+      return;
+    }
+
+    // Fallback (older versions)
+    if (window.freighter) {
       const publicKey = await window.freighter.getPublicKey();
       setWallet(publicKey);
-    } catch (e) {
-      console.log(e);
+      return;
     }
-  };
+
+    // If nothing found → graceful UI message
+    setWallet("not-installed");
+
+  } catch (e) {
+    console.log(e);
+  }
+};
 
   // ➕ Earn Points
   const earnPoints = () => {
@@ -113,15 +124,16 @@ function App() {
 
         {/* Wallet */}
         <button onClick={connectWallet} style={styles.walletBtn}>
-          {wallet ? "Wallet Connected ✅" : "Connect Wallet"}
-        </button>
+  {wallet
+    ? wallet === "not-installed"
+      ? "Install Freighter"
+      : "Wallet Connected ✅"
+    : "Connect Wallet"}
+</button>
 
-        {wallet && (
-          <p style={styles.walletText}>
-            {wallet}
-          </p>
-        )}
-
+{wallet && wallet !== "not-installed" && (
+  <p style={styles.walletText}>{wallet}</p>
+)}
         <p>Points: {points}</p>
         <p>Tokens: {tokens}</p>
 
