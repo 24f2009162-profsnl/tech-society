@@ -316,10 +316,22 @@ This ensures that MVP testing is not simulated but based on actual user interact
 - Multi-city testing (Chandigarh, Rajasthan, Delhi, Nagpur, Chennai, Assam)  
 - Cross-device validation (mobile + desktop)  
 This validates real-world usability and scalability of the KPP MVP.
+## 🌐 Stellar Wallet Integration
+Test Wallet Connections:
+- GXXXX... (Developer)
+- GXXXX... (User 1)
+- GXXXX... (User 2)
+- Users can connect their Stellar wallet using Freighter  
+- Public key is fetched and displayed in the app  
+- This enables real identity layer for future transactions  
+Next step:
+- Integrate token minting and transactions on testnet
 
 ## Author Details
 Twisha Shriyam
+
 IIT Madras BS
+
 Built under Rise In with Stellar (Started: 14th Feb 2026)
 
 ## 🔧 Local Testing (Simulation)
