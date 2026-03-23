@@ -5,7 +5,6 @@ This project showcases a Hardhat 3 Beta project using the native Node.js test ru
 To learn more about the Hardhat 3 Beta, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3 Beta](https://hardhat.org/hardhat3-beta-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
 
 ## Project Overview
-
 This example project includes:
 
 - A simple Hardhat configuration file.
@@ -112,7 +111,14 @@ This creates a seamless **Earn → Convert → Spend → Track** cycle embedded 
 - 🔄 Points-to-token conversion using inter-contract calls  
 - 💸 Peer-to-peer payments (QR + wallet integration)  
 - 📊 Transaction history and balance tracking  
-- 📱 Mobile-responsive interface for real-world usability  
+- 📱 Mobile-responsive interface for real-world usability 
+ 
+## 📂 Project Structure
+
+- /contracts → Smart contract logic (Belt 4)
+- /kpp-mvp → Frontend MVP (Belt 5)
+- /screenshots → Proof and UI
+- README.md → Complete documentation
 
 ## 🏗️ Architecture
 
