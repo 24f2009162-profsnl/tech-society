@@ -25,36 +25,39 @@ function App() {
   // Load user data
   // eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
-  useEffect(() => {
-    if (user) {
-      const data = JSON.parse(localStorage.getItem(user)) || {
-        points: 0,
-        tokens: 0,
-        history: []
-      };
+  if (user) {
+    const data = JSON.parse(localStorage.getItem(user)) || {
+      points: 0,
+      tokens: 0,
+      history: []
+    };
 
-      setPoints(data.points);
-      setTokens(data.tokens);
-      setHistory(data.history);
+    setPoints(data.points);
+    setTokens(data.tokens);
+    setHistory(data.history);
 
-      // 🎁 DAILY LOGIN BONUS
-      const today = new Date().toDateString();
-      const lastLogin = localStorage.getItem(user + "_lastLogin");
+    const today = new Date().toDateString();
+    const lastLogin = localStorage.getItem(user + "_lastLogin");
 
-      if (lastLogin !== today) {
-        const bonusPoints = data.points + 5;
-        const newHistory = [...data.history, "+5 Points (Daily Login Bonus 🎉)"];
+    if (lastLogin !== today) {
+      const bonusPoints = data.points + 5;
+      const newHistory = [...data.history, "+5 Points (Daily Login Bonus 🎉)"];
 
-        setPoints(bonusPoints);
-        setHistory(newHistory);
+      setPoints(bonusPoints);
+      setHistory(newHistory);
 
-        localStorage.setItem(user + "_lastLogin", today);
-        saveData(bonusPoints, data.tokens, newHistory);
-      }
+      localStorage.setItem(user + "_lastLogin", today);
 
-      updateLeaderboard();
+      localStorage.setItem(user, JSON.stringify({
+        points: bonusPoints,
+        tokens: data.tokens,
+        history: newHistory
+      }));
     }
-  }, [user]);
+
+    updateLeaderboard();
+  }
+}, [user]);
 
   const saveData = (p, t, h) => {
     localStorage.setItem(user, JSON.stringify({
